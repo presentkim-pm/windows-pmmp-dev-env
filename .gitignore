@@ -8,6 +8,7 @@ banned-ips.txt
 banned-players.txt
 ops.txt
 pocketmine.yml
+PocketMine-MP.phar
 server.lock
 server.log
 server.properties
