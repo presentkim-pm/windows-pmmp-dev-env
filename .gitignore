@@ -1,0 +1,14 @@
+#Ignore PMMP files
+players/
+plugin_data/
+plugins/
+resource_packs/
+worlds/
+banned-ips.txt
+banned-players.txt
+ops.txt
+pocketmine.yml
+server.lock
+server.log
+server.properties
+white-list.txt
