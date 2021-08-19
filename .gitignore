@@ -1,4 +1,5 @@
 #Ignore PMMP files
+bin/
 players/
 plugin_data/
 plugins/
