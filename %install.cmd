@@ -1,8 +1,9 @@
 @ECHO OFF
-TITLE Pocketmine-MP Install (%CHANNEL%)
 cd /d %~dp0
 
 IF [%1]==[] (set CHANNEL=stable) ELSE (set CHANNEL=%1)
+TITLE Pocketmine-MP Install (%CHANNEL%)
+
 set BASE_DIR=%cd%
 set BIN_DIR=%BASE_DIR%\bin
 set PHP_DIR=%BIN_DIR%\php
