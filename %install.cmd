@@ -56,12 +56,11 @@ MOVE PocketMine-MP.phar ..\..\PocketMine-MP.phar > nul
 ECHO.
 
 ECHO [96m[6/6] Build DevTools...[0m
-cd %BASE_DIR%
-set DEVTOOLS_PATH=%PMMP_DIR%\tests\plugins\DevTools
-set SCRIPT_PATH=%DEVTOOLS_PATH%\src\DevTools\ConsoleScript.php
+cd %PMMP_DIR%\tests\plugins\DevTools
+set PLUGINS_DIR=%BASE_DIR%\plugins
 
-IF NOT EXIST plugins/ ( MKDIR plugins )
-%PHP% -dphar.readonly=0 %SCRIPT_PATH% --make %DEVTOOLS_PATH% --out plugins\DevTools.phar
+IF NOT EXIST %PLUGINS_DIR% ( MKDIR %PLUGINS_DIR% )
+%PHP% -dphar.readonly=0 ./src\ConsoleScript.php --make ./ --out %PLUGINS_DIR%\DevTools.phar
 ECHO.
 ECHO.
 ECHO [96m[*/*] All processing are done![0m
