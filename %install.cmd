@@ -18,7 +18,7 @@ IF EXIST %PHP_DIR% (
     ECHO [36mAlready exists.[0m
 ) ELSE (
     powershell -Command "Invoke-WebRequest https://git.io/pm-php -OutFile php.zip"
-    powershell -command "Expand-Archive -Force php.zip bin/php"
+    powershell -Command "Expand-Archive -Force php.zip %PHP_DIR%"
     del /f php.zip > nul
     ECHO [92mSuccessfully installed.[0m
 )
