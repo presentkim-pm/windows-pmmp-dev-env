@@ -44,18 +44,13 @@ IF EXIST %PMMP_DIR% (
 )
 ECHO.
 
-ECHO [96m[4/6] Update composer dependency...[0m
-cd %PMMP_DIR%
-%PHP% %COMPOSER_PHAR% install --no-dev --classmap-authoritative --ignore-platform-reqs --no-interaction
-ECHO.
-
-ECHO [96m[5/6] Build PocketMine-MP...[0m
+ECHO [96m[4/5] Build PocketMine-MP...[0m
 cd %PMMP_DIR%
 %PHP% %COMPOSER_PHAR% make-server
 MOVE PocketMine-MP.phar ..\..\PocketMine-MP.phar > nul
 ECHO.
 
-ECHO [96m[6/6] Build DevTools...[0m
+ECHO [96m[5/5] Build DevTools...[0m
 cd %PMMP_DIR%\tests\plugins\DevTools
 set PLUGINS_DIR=%BASE_DIR%\plugins
 
